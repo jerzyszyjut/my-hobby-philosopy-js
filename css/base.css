@@ -1,0 +1,23 @@
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #8f4640;
+    --color-tertiary: #e3262a;
+    --color-tertiary-dark: #a3181b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Aleo', serif;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Moje hobby - filozofia</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        Filozofia
+    </header>
+    <nav class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                &nbsp;
+            </span>
+        </label>
+        <ul class="navigation__list">
+            <li class="navigation__list__element"><a class="navigation__link" href="index.html">Strona główna</a>
+            </li>
+            <li class="navigation__list__element"><a class="navigation__link" href="quotes.html">Cytaty</a></li>
+            <li class="navigation__dropdown navigation__list__element">
+                <input id="dropdown_checkbox" type="checkbox" name="Filozofowie" class="navigation__dropdown__checkbox">
+                <label for="dropdown_checkbox" class="navigation__dropdown__label">
+                    Filozofowie
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36">
+                        <path d="M10.5 15l7.5 7.5 7.5-7.5z" />
+                        <path d="M0 0h36v36h-36z" fill="none" />
+                    </svg>
+                </label>
+                <ul class="navigation__dropdown__submenu">
+                    <li class="navigation__list__element"><a class="navigation__link"
+                            href="philosophers/presocratics.html">Presokratycy</a></li>
+                    <li class="navigation__list__element"><a class="navigation__link"
+                            href="philosophers/spa.html">Sokrates,
+                            Platon, Arystoteles</a></li>
+                    <li class="navigation__list__element"><a class="navigation__link"
+                            href="philosophers/remaining.html">Pozostali</a></li>
+                </ul>
+            </li>
+            <li class="navigation__list__element active"><a class="navigation__link" href="sources.html">Źródła</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <div class="content">
+            <h2>Źródła z których korzystałem przy tworzeniu strony</h2>
+            <ul>
+                <li>Dzieje zachodniej filozofii - Bertrand Russell</li>
+                <li>Historia filozofii - Władysław Tatarkiewicz</li>
+                <li><a href="https://filozofuj.eu/wydania/">Magazyn popularyzujący filozofię - filozofuj!</a></li>
+                <li><a href="https://biografia24.pl/" target="_blank">https://biografia24.pl/</a></li>
+                <li><a href="https://wikipedia.org/" target="_blank">https://wikipedia.org/</a></li>
+                <li>Notatki własne</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Moje Hobby, Projekt Etap 1, Hipertekst i Hipermedia, Jerzy Szyjut
+        </div>
+        <a href="#top">
+            Wróć na górę strony
+            <svg class="svg-icon"
+                style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M170.666667 640l341.333333-341.333333 341.333333 341.333333-85.333333 85.333333-256-256-256 256z"
+                    fill="#000000" />
+            </svg>
+        </a>
+    </footer>
+</body>
+
+</html>

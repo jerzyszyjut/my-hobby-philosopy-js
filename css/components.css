@@ -1,0 +1,199 @@
+.quote {
+    background-color: white;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    margin: 3rem;
+    max-width: 70vw;
+}
+
+
+.quote:nth-child(n) {
+    width: 30rem;
+}
+
+.quote:nth-child(2n) {
+    width: 50rem;
+}
+
+.quote:nth-child(3n) {
+    width: 40rem;
+}
+
+.quote:nth-child(4n) {
+    width: 40rem;
+}
+
+.quote:nth-child(5n) {
+    width: 60rem;
+}
+
+.quote:nth-child(6n) {
+    width: 30rem;
+}
+
+.quote:nth-child(7n) {
+    width: 50rem;
+}
+
+.quote:nth-child(8n) {
+    width: 30rem;
+}
+
+.quote:nth-child(9n) {
+    width: 40rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .quote {
+        padding: 2rem;
+        margin-bottom: 3rem;
+        width: 100% !important;
+    }
+}
+
+.quote__text {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    z-index: 99;
+    position: relative;
+}
+
+.quote__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote__hidden_photo {
+    display: none;
+    height: 4.5rem;
+    width: 4.5rem;
+    object-fit: contain;
+}
+
+.quote__photo:hover~.quote__hidden_photo,
+.quote__photo:focus~.quote__hidden_photo,
+.quote__photo:active~.quote__hidden_photo {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(15);
+    z-index: 999;
+}
+
+.quote__user-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1 0;
+    padding-left: 1rem;
+}
+
+.quote__user-name {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.quote::before {
+    content: "“";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    bottom: 10rem;
+    right: 7rem;
+    font-size: 20rem;
+    color: #f4f2f2;
+    font-family: sans-serif;
+    z-index: 9;
+}
+
+.philosopher {
+    display: flex;
+    flex-direction: column;
+}
+
+.philosopher__header {
+    display: flex;
+}
+
+.philosopher__photo {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.philosopher__table {
+    text-align: left;
+    width: max-content;
+    border: 1px solid var(--color-secondary);
+    margin-left: auto;
+}
+
+.philosopher__table th {
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.philosopher__table td {
+    padding: 1rem;
+}
+
+.philosopher__description {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.philosopher__description__section {
+    margin-bottom: 2rem;
+}
+
+.philosopher__description__section h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.philosopher__description__section ul {
+    padding-left: 4rem;
+}
+
+.philosopher__related_concepts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.philosopher__related_concepts div {
+    margin: 1rem;
+    padding: 1rem;
+    background-image: linear-gradient(to right, var(--color-tertiary), var(--color-tertiary-dark));
+    color: white;
+    border-radius: 5px;
+    user-select: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .philosopher__header {
+        flex-direction: column;
+    }
+
+    .philosopher__table {
+        margin: 0;
+    }
+}

@@ -1,0 +1,370 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3.2rem;
+}
+
+body>* {
+    width: 100%;
+}
+
+header {
+    font-size: 6rem;
+    color: var(--color-tertiary);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    user-select: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 700;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--color-tertiary);
+}
+
+.hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero1 {
+    min-height: 40rem;
+    background-image: url('../images/The_School_of_Athens.jpg');
+}
+
+#hero2 {
+    background-image: url('../images/The_Death_of_Socrates.jpg');
+    min-height: 20rem;
+}
+
+#hero3 {
+    background-image: url('../images/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg');
+    min-height: 40rem;
+    background-position: top;
+}
+
+.content {
+    padding: 2rem 10vw;
+    font-size: 2rem;
+}
+
+section {
+    border-top: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
+    padding: 2rem 0;
+}
+
+footer {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-top: 0.5rem solid var(--color-secondary);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--color-primary);
+    z-index: 999;
+}
+
+footer a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-family: inherit;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    font-size: 2rem;
+    transition: all 0.2s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    transform: translateY(-0.5rem);
+    cursor: pointer;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active {
+    transform: translateY(-0.2rem);
+}
+
+input {
+    border: none;
+    border-bottom: 0.1rem solid var(--color-secondary);
+    padding: 0.2rem;
+    outline: none;
+    font-size: 1.4rem;
+    background-color: var(--color-primary);
+}
+
+.navigation a {
+    font-weight: inherit;
+}
+
+.navigation__list {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    border-bottom: 0.5rem solid var(--color-secondary);
+    justify-content: flex-start;
+}
+
+.navigation__list__element {
+    padding: 0 2rem;
+    font-size: 2rem;
+}
+
+.navigation__list__element.active {
+    color: var(--color-tertiary);
+}
+
+.navigation__list>.navigation__list__element:last-child {
+    margin-left: auto;
+}
+
+.navigation__dropdown__label {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.navigation__dropdown__label:hover {
+    color: var(--color-tertiary);
+    fill: var(--color-tertiary);
+}
+
+.navigation__dropdown {
+    position: relative;
+}
+
+.navigation__dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.navigation__dropdown__checkbox {
+    display: none;
+}
+
+.navigation__dropdown__submenu {
+    list-style: none;
+    position: absolute;
+    visibility: hidden;
+    display: block;
+    opacity: 0%;
+    background-color: var(--color-primary);
+    border-top: 0.5rem solid var(--color-secondary);
+    top: 2.4rem;
+    transition: all 0.2s;
+    width: 130%;
+}
+
+.navigation__dropdown__submenu li {
+    padding: 0.5rem 0;
+    margin: 0 2rem;
+}
+
+.navigation__dropdown__checkbox:checked~ul.navigation__dropdown__submenu {
+    visibility: visible;
+    opacity: 100%;
+}
+
+@keyframes rotate-dropdown {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    30% {
+        transform: rotateZ(90deg);
+    }
+
+    100% {
+        transform: rotateZ(-180deg);
+    }
+}
+
+.navigation__dropdown__checkbox:checked~label.navigation__dropdown__label>svg {
+    animation: rotate-dropdown 1s;
+    animation-fill-mode: both;
+}
+
+.navigation__link {
+    display: inline-block;
+}
+
+.navigation__checkbox {
+    display: none;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+    display: none;
+    width: 5rem;
+    height: 0.2rem;
+    background-color: black;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+
+.navigation__icon {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.navigation__icon::before {
+    left: 0;
+    top: -1.6rem;
+}
+
+.navigation__icon::after {
+    top: 1.6rem;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
+    background-color: transparent;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+.poll fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem 1rem 1rem;
+    user-select: none;
+}
+
+.poll__question_label {
+    padding-top: 1rem;
+}
+
+.quotes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 960px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer a {
+        margin-top: 1rem;
+        position: static;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .navigation__list {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: none;
+    }
+
+    .navigation__checkbox:checked~.navigation__list {
+        display: flex;
+    }
+
+    .navigation__list__element {
+        margin: 1rem 0;
+        padding: 0;
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    .navigation__list>.navigation__list__element:last-child {
+        margin-left: 0;
+    }
+
+    .navigation__dropdown__submenu {
+        position: static;
+        display: none;
+    }
+
+    .navigation__dropdown__checkbox:checked~ul.navigation__dropdown__submenu {
+        width: 95%;
+        visibility: visible;
+        opacity: 100%;
+        display: block;
+    }
+
+    .navigation__dropdown {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navigation__dropdown__label>svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .navigation__icon,
+    .navigation__icon::after,
+    .navigation__icon::before {
+        display: inline-block;
+    }
+}
