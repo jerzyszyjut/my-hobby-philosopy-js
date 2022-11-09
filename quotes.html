@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
+    <script src="js/index.js" type="module" defer></script>
+    <script src="js/quotes.js" type="module" defer></script>
 </head>
 
 <body>
@@ -54,6 +56,13 @@
     </nav>
     <div class="wrapper">
         <div class="hero" id="hero3"></div>
+        <form class="add_quote" id="add_quote_form" style="display: none;">
+            <label for="quote">Dodaj cytat</label>
+            <textarea name="quote" id="quote_text" cols="30" rows="10"></textarea>
+            <label for="author">Autor</label>
+            <input type="text" name="author" id="quote_author">
+            <button type="submit">Dodaj</button>
+        </form>
         <div class="content quotes">
             <div class="quote">
                 <blockquote class="quote__text">
