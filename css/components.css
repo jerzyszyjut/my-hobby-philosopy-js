@@ -1,5 +1,6 @@
 .quote {
-    background-color: white;
+    background-color: var(--color-primary);
+    border: 1px solid white;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
     padding: 3rem;
     padding-right: 10rem;
@@ -119,7 +120,7 @@
 .philosopher__table th {
     padding: 1rem;
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--color-primary);
 }
 
 .philosopher__table td {
@@ -156,7 +157,7 @@
     margin: 1rem;
     padding: 1rem;
     background-image: linear-gradient(to right, var(--color-tertiary), var(--color-tertiary-dark));
-    color: white;
+    color: var(--color-primary);
     border-radius: 5px;
     user-select: none;
 }

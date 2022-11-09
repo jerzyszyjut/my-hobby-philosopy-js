@@ -27,7 +27,7 @@
             </span>
         </label>
         <ul class="navigation__list">
-            <li class="navigation__list__element"><a class="navigation__link" href="index.html">Strona główna</a>
+            <li class="navigation__list__element active"><a class="navigation__link" href="index.html">Strona główna</a>
             </li>
             <li class="navigation__list__element"><a class="navigation__link" href="quotes.html">Cytaty</a></li>
             <li class="navigation__dropdown navigation__list__element">
@@ -49,20 +49,29 @@
                             href="philosophers/remaining.html">Pozostali</a></li>
                 </ul>
             </li>
-            <li class="navigation__list__element active"><a class="navigation__link" href="sources.html">Źródła</a></li>
+            <li class="navigation__list__element"><a class="navigation__link" href="sources.html">Źródła</a></li>
         </ul>
     </nav>
     <div class="wrapper">
-        <div class="content">
-            <h2>Źródła z których korzystałem przy tworzeniu strony</h2>
-            <ul>
-                <li>Dzieje zachodniej filozofii - Bertrand Russell</li>
-                <li>Historia filozofii - Władysław Tatarkiewicz</li>
-                <li><a href="https://filozofuj.eu/wydania/">Magazyn popularyzujący filozofię - filozofuj!</a></li>
-                <li><a href="https://biografia24.pl/" target="_blank">https://biografia24.pl/</a></li>
-                <li><a href="https://wikipedia.org/" target="_blank">https://wikipedia.org/</a></li>
-                <li>Notatki własne</li>
-            </ul>
+        <div class="content" style="display: none;">
+            <h1>Ustawienia</h1>
+            <div class="settings">
+                <div class="settings__element">
+                    <label for="theme">Motyw:</label>
+                    <select name="theme" id="theme">
+                        <option value="light">Jasny</option>
+                        <option value="dark">Ciemny</option>
+                    </select>
+                </div>
+                <div class="settings__element">
+                    <label for="font_size">Rozmiar czcionki:</label>
+                    <select name="font_size" id="font_size">
+                        <option value="small">Mała</option>
+                        <option value="medium">Średnia</option>
+                        <option value="large">Duża</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
