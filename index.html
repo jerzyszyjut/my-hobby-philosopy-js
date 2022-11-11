@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/index.js" type="module" defer></script>
+    <script src="js/poll.js" type="module" defer></script>
 </head>
 
 <body>
@@ -157,15 +158,18 @@
                             <input type="checkbox" name="schools" id="cynicy" value="cynicy">
                             <label for="cynicy">Cynicy</label>
                         </span>
-                        <label class="poll__question_label" for="favPhilosopher">Jaki jest twój ulubiony
-                            filozof?</label>
-                        <input type="text" id="favPhilosopher" name="favPhilosopher">
-                        <label class="poll__question_label" for="impDay1">Jaki jest, twoim zdaniem, najważniejszy dzień
+                        <label class="poll__question_label" for="favourite-philosopher">Jaki jest twoim zdaniem
+                            najważniejszy
+                            filozof w historii?</label>
+                        <input type="text" id="favourite-philosopher" name="favourite-philosopher">
+                        <label class="poll__question_label" for="important-day">Jaki jest, twoim zdaniem, najważniejszy
+                            dzień
                             w
                             historii ludzkości?</label>
-                        <input type="date" id="impDay1" name="impDay1" value="1971-01-24">
-                        <label class="poll__question_label" for="impDay2">Cos się wtedy wydarzyło?</label>
-                        <input type="text" id="impDay2" name="impDay2">
+                        <input type="date" id="important-day" name="important-day" value="1971-01-24">
+                        <label class="poll__question_label" for="important-day-description">Cos się wtedy
+                            wydarzyło?</label>
+                        <input type="text" id="important-day-description" name="important-day-description">
                     </fieldset>
                     <input type="submit" value="Prześlij">
                     <input type="reset" value="Wyczyść">
