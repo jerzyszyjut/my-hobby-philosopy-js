@@ -60,9 +60,12 @@ const settingsInputs = document.querySelector('.content');
 settingsInputs.style.display = 'block';
 
 export function loadTheme() {
-    const theme = localStorage.getItem('theme');
+    let theme = localStorage.getItem('theme');
     if (theme === 'dark') {
         changeTheme(true);
+    } else {
+        changeTheme(false);
+        theme = 'light';
     }
 
     if (settingsThemeSelect) {
