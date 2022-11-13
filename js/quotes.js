@@ -1,6 +1,31 @@
 const addQuoteForm = document.querySelector('#add_quote_form');
 addQuoteForm.style.display = 'flex';
 
+const presocratics = [
+    { id: 'Pitagoras', name: 'Pitagoras' },
+    { id: 'Parmenides', name: 'Parmenides' },
+    { id: 'Heraclito', name: 'Heraclites' },
+    { id: 'Anaksagoras', name: 'Anaksagoras' },
+]
+
+const spa = [
+    { id: 'Socrates', name: 'Sokrates' },
+    { id: 'Plato', name: 'Platon' },
+    { id: 'Aristotle', name: 'Arystoteles' },
+]
+
+const remaining = [
+    { id: 'Aurelius', name: 'Marek Aureliusz' },
+    { id: 'Kant', name: 'Immanuel Kant' },
+    { id: 'Dostoevsky', name: 'Fiodor Dostojewski' },
+    { id: 'Nietzsche', name: 'Fryderyk Nietzsche' },
+]
+
+const authorsToNameArray = (authors) => {
+    return authors.map((author) => author.name)
+}
+
+export const availablePhilosophers = [...authorsToNameArray(presocratics), ...authorsToNameArray(spa), ...authorsToNameArray(remaining)]
 
 function getQuotesFromLocalStorage() {
     return JSON.parse(localStorage.getItem('quotes')) || [];
@@ -43,7 +68,29 @@ function createQuoteElement(quoteData) {
 
     const quoteAuthorParagraph = document.createElement('p');
     quoteAuthorParagraph.classList.add('quote__user-name');
-    quoteAuthorParagraph.textContent = quoteData.author;
+
+    if (availablePhilosophers.includes(quoteData.author)) {
+        const quoteAuthorLink = document.createElement('a');
+        let href;
+        let author;
+        author = presocratics.find((philosopher) => philosopher.name === quoteData.author)
+        if (author) {
+            href = `./philosophers/presocratics.html#${author.id}`;
+        }
+        author = spa.find((philosopher) => philosopher.name === quoteData.author)
+        if (author) {
+            href = `./philosophers/spa.html#${author.id}`;
+        }
+        author = remaining.find((philosopher) => philosopher.name === quoteData.author)
+        if (author) {
+            href = `./philosophers/remaining.html#${author.id}`;
+        }
+        quoteAuthorLink.href = href;
+        quoteAuthorLink.textContent = quoteData.author;
+        quoteAuthorParagraph.appendChild(quoteAuthorLink);
+    } else {
+        quoteAuthorParagraph.textContent = quoteData.author;
+    }
 
     quoteAuthorNameBox.appendChild(quoteAuthorParagraph);
     quoteAuthor.appendChild(quoteAuthorImage);
