@@ -72,7 +72,7 @@ function loadInputValuesFromSessionStorage() {
     loadInputValues(inputValues);
 }
 
-function clearInputValuesFromSessionStorage() {
+export function clearInputValuesFromSessionStorage() {
     sessionStorage.removeItem("inputValues");
 }
 
@@ -83,6 +83,10 @@ form.addEventListener("change", (event) => {
 });
 
 form.addEventListener("reset", (event) => {
+    clearInputValuesFromSessionStorage();
+});
+
+form.addEventListener("submit", (event) => {
     clearInputValuesFromSessionStorage();
 });
 

@@ -9,11 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/jquery.min.js"></script>
     <title>Moje hobby - filozofia</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/index.js" type="module" defer></script>
     <script src="js/poll.js" type="module" defer></script>
+    <script src="js/pollJQuery.js" type="module" defer></script>
 </head>
 
 <body>
@@ -109,18 +114,18 @@
                     <fieldset>
                         <legend>Informacje o tobie</legend>
                         <label for="age" class="poll__question_label">Wiek:</label>
-                        <input type="number" id="age" name="age" min="0" max="100" required>
+                        <input type="number" id="age" name="age">
                         <label class="poll__question_label">Płeć:</label>
                         <span>
-                            <input type="radio" name="gender" id="male" value="m" required>
+                            <input type="radio" name="gender" id="male" value="m">
                             <label for="male">Mężczyzna</label>
                         </span>
                         <span>
-                            <input type="radio" name="gender" id="female" value="f" required>
+                            <input type="radio" name="gender" id="female" value="f">
                             <label for="female">Kobieta</label>
                         </span>
                         <label for="education" class="poll__question_label">Wykształcenie:</label>
-                        <select id="education" name="education" required>
+                        <select id="education" name="education">
                             <option value="">-</option>
                             <option value="0">Podstawowe</option>
                             <option value="1">Średnie</option>

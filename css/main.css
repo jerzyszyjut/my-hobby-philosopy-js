@@ -242,7 +242,7 @@ label.navigation__dropdown__label>svg {
     display: none;
     width: 5rem;
     height: 0.2rem;
-    background-color: var(--color-primary);
+    background-color: var(--font-color);
 }
 
 .navigation__icon::before,
