@@ -26,8 +26,14 @@ function validateValue(value, rules) {
     return;
 }
 
-function showMessage() {
-    console.log(message.replace('{}', input.name));
+function showMessage(message) {
+    $('#dialog-message')
+        .first()
+        .html(message);
+
+
+    $('#dialog-message')
+        .dialog();
 }
 
 $('form.poll').submit(function (event) {
@@ -42,11 +48,11 @@ $('form.poll').submit(function (event) {
     for (const input of inputs) {
         let message = validateValue(input.value, input.rules);
         if (message) {
-            showMessage();
+            showMessage(message.replace('{}', input.name));
+            event.preventDefault();
             break;
         }
     }
 
     clearInputValuesFromSessionStorage();
-    event.preventDefault();
 });

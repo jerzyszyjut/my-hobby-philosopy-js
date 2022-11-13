@@ -301,6 +301,10 @@ label.navigation__dropdown__label>svg {
     flex-wrap: wrap;
 }
 
+.ui-widget {
+    font-size: 200%;
+}
+
 @media only screen and (max-width: 960px) {
     .hero {
         background-attachment: scroll;
