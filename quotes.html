@@ -17,17 +17,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
         integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/theme.min.css"
         integrity="sha512-hbs/7O+vqWZS49DulqH1n2lVtu63t3c3MTAn0oYMINS5aT8eIAbJGDXgLt6IxDHcWyzVTgf9XyzZ9iWyVQ7mCQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Moje hobby - filozofia</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
-    <script src="js/index.js" type="module" defer></script>
-    <script src="js/quotes.js" type="module" defer></script>
-    <script src="js/quotesJQuery.js" type="module" defer></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/quotes.js" type="module"></script>
+    <script src="js/quotesJQuery.js" type="module"></script>
 </head>
 
 <body>
@@ -70,10 +70,12 @@
     <div class="wrapper">
         <div class="hero" id="hero3"></div>
         <form class="add_quote" id="add_quote_form" style="display: none;">
-            <label for="quote">Dodaj cytat</label>
-            <textarea name="quote" id="quote_text" cols="30" rows="10"></textarea>
-            <label for="author">Autor</label>
-            <input type="text" name="author" id="quote_author">
+            <label>Dodaj cytat
+                <textarea name="quote" id="quote_text" cols="30" rows="10"></textarea>
+            </label>
+            <label>Autor
+                <input type="text" name="author" id="quote_author">
+            </label>
             <button type="submit">Dodaj</button>
         </form>
         <div class="content quotes">
