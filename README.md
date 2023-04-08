@@ -1,5 +1,6 @@
 # My hobby - philosophy
 ## HTML website with JavaScript and jQuery
+Extended https://github.com/jerzyszyjut/my-hobby-philosopy-html-xml with JS
 
 This is a project I did during my first term of informatics studies on Gdańsk University of Technology.
 
